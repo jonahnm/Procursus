@@ -10,7 +10,7 @@ jobs:
       - name: Setup Theos
         uses: beerpiss/theos-action@v1.7.0
       - name: Install Procursus
-        uses: PureCyan/procursus-action@v2.0.1
+        uses: PureCyan/procursus-action@0.0.1
         with:
           packages: autoconf automake autopoint bash bison cmake curl docbook-xml docbook-xsl fakeroot findutils flex gawk git gnupg grep groff gzip ldid libtool make ncurses-bin openssl patch pkg-config po4a python3 sed tar triehash xz-utils zstd
       - name: checkout repo
