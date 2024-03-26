@@ -17,3 +17,8 @@ jobs:
         uses: actions/checkout@main
       - name: build application
         run: brew install bash && MEMO_TARGET=iphoneos-arm64e make luajit-package
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.1
+        with:
+         path: /Users/runner/work/Procursus/Procursus/build_dist/iphoneos-arm64e/1800/work//../luajit/*.deb
+          
