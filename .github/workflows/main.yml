@@ -12,4 +12,4 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@main
       - name: build application
-        run: MEMO_TARGET=iphoneos-arm64e make luajit-package
+        run: brew install bash && MEMO_TARGET=iphoneos-arm64e make luajit-package
