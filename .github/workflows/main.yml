@@ -1,28 +1,14 @@
-            - name: Setup Theos
-  # You may pin to the exact commit or the version.
-  # uses: beerpiss/theos-action@e27e8335ec3777c2daabedec89a9178b1d4e70c0
-  uses: beerpiss/theos-action@v1.7.0
-  with:
-    # Where to install Theos
-    theos-dir: # optional, default is ${{ github.workspace }}/theos
-    # Where to clone Theos itself from (git URL)
-    theos-src: # optional, default is https://github.com/theos/theos
-    # The branch, tag or SHA to clone Theos from
-    theos-ref: # optional, default is master
-    # Where to clone the iOS SDKs from (git URL)
-    theos-sdks: # optional, default is https://github.com/theos/sdks
-    # The branch, tag or SHA to get Theos sdks from
-    theos-sdks-ref: # optional, default is master
-    # Cache Theos installation for faster installation
-    cache: # optional, default is true
-    # Cache location for Theos
-    cache-dir-theos: # optional, default is /usr/local/opt/__theos_cache
-    # Cache location for SDKs
-    cache-dir-sdks: # optional, default is /usr/local/opt/__theos_sdks_cache
-  jobs:
+name: Build
+on:
+ push:
+  branches: [ main ]
+
+jobs:
     build:
       runs-on: macos-latest
       steps:
+      - name: Setup Theos
+        uses: beerpiss/theos-action@v1.7.0
       - name: checkout repo
         uses: actions/checkout@main
       - name: build application
