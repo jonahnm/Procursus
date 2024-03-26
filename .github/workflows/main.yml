@@ -14,7 +14,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@main
       - name: build application
-        run: brew install make && MEMO_TARGET=iphoneos-arm64e-rootless make luajit-package
+        run: brew install make && MEMO_TARGET=iphoneos-arm64e-rootless gmake luajit-package
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.1
         with:
