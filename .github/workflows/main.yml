@@ -7,8 +7,6 @@ jobs:
     build:
       runs-on: macos-11
       steps:
-      - name: Setup Theos
-        uses: beerpiss/theos-action@v1.7.0
       - name: Install Procursus
         uses: PureCyan/procursus-action@0.0.1
         with:
@@ -20,5 +18,5 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.1
         with:
-         path: /Users/runner/work/Procursus/Procursus/build_dist/iphoneos-arm64e-rootless/luajit/*.deb
+         path: /Users/runner/work/Procursus/Procursus/build_dist/iphoneos-arm64*/*/luajit/*.deb
           
